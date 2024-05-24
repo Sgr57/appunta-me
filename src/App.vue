@@ -34,10 +34,7 @@ const app = initializeApp(firebaseConfig);
 
     <div class="wrapper">
       <div>
-        TEST_ENV: {{TEST_ENV}}
-      </div>
-      <div>
-        VITE_TEST_ENV: {{VITE_TEST_ENV}}
+       Hello world!
       </div>
 
       <nav>
