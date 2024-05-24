@@ -3,6 +3,29 @@ import { RouterLink, RouterView } from 'vue-router'
 
 const VITE_TEST_ENV = import.meta.env.VITE_TEST_ENV;
 const TEST_ENV = import.meta.env.TEST;
+
+
+
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAHjfGSZCBj5FWK-ecrsqKH6AMZ7rV0rb8",
+  authDomain: "appunta-me.firebaseapp.com",
+  projectId: "appunta-me",
+  storageBucket: "appunta-me.appspot.com",
+  messagingSenderId: "232370185440",
+  appId: "1:232370185440:web:152a037489baeee9efdc85"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+
 </script>
 
 <template>
