@@ -1,0 +1,24 @@
+
+:root {
+    --primary-brand-color: #ffa931ff;
+    --primary-light-brand-color: #ffe295ff;
+    --neutro-brand-color: #f5f5f5ff;
+    --secondary-brand-color: #01233dff;
+    --black-brand-color: #1c1c1cff;
+    --gray-light-brand-color: #b8b8b8ff;
+
+    /* CSS HEX */
+    --orange-web: #ffa931ff;
+    --jasmine: #ffe295ff;
+    --white: #F5F5F5;
+    --oxford-blue: #01233dff;
+    --eerie-black: #1c1c1cff;
+
+    /* CSS HSL */
+    --orange-web: hsla(35, 100%, 60%, 1);
+    --jasmine: hsla(44, 100%, 79%, 1);
+    --white: hsla(0, 0%, 100%, 1);
+    --oxford-blue: hsla(206, 97%, 12%, 1);
+    --eerie-black: hsla(0, 0%, 11%, 1);
+
+}
