@@ -7,7 +7,9 @@ const TEST_ENV = import.meta.env.TEST;
 </script>
 
 <template>
-  <RouterView />
+  <div class="main-view">
+    <RouterView />
+  </div>
 </template>
 
 <style>

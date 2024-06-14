@@ -8,14 +8,28 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     ElButton: typeof import('element-plus/es')['ElButton']
+    ElCol: typeof import('element-plus/es')['ElCol']
+    ElContainer: typeof import('element-plus/es')['ElContainer']
     ElHeader: typeof import('element-plus/es')['ElHeader']
     ElIcon: typeof import('element-plus/es')['ElIcon']
     ElImage: typeof import('element-plus/es')['ElImage']
     ElInput: typeof import('element-plus/es')['ElInput']
     ElMain: typeof import('element-plus/es')['ElMain']
+    ElRow: typeof import('element-plus/es')['ElRow']
+    ElText: typeof import('element-plus/es')['ElText']
+    Header: typeof import('./src/components/Header.vue')['default']
+    LoginForm: typeof import('./src/components/LoginForm.vue')['default']
+    NoteActions: typeof import('./src/components/NoteActions.vue')['default']
+    NoteElement: typeof import('./src/components/NoteElement.vue')['default']
+    NoteInfo: typeof import('./src/components/NoteInfo.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TextArea: typeof import('./src/components/TextArea.vue')['default']
+    VButton: typeof import('./src/components/VButton.vue')['default']
+    VHeader: typeof import('./src/components/VHeader.vue')['default']
     VImg: typeof import('./src/components/VImg.vue')['default']
     VInput: typeof import('./src/components/VInput.vue')['default']
+    VLogo: typeof import('./src/components/VLogo.vue')['default']
+    VTextArea: typeof import('./src/components/VTextArea.vue')['default']
   }
 }
