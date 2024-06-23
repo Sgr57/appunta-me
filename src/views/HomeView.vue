@@ -4,7 +4,7 @@ import { useCollection, useFirestore } from 'vuefire'
 import { addDoc, collection, deleteDoc, doc } from 'firebase/firestore'
 import { useRouter } from 'vue-router'
 import VButton from '@/components/VButton.vue'
-import VHeader from '@/components/VHeader.vue'
+import TheHeader from '@/components/TheHeader.vue'
 import NoteElement from '@/components/NoteElement.vue'
 
 const router = useRouter()
@@ -29,11 +29,11 @@ const editNote = (noteId: string) => {
 </script>
 
 <template>
-  <v-header>
+  <the-header>
     <template #right>
       <v-button :icon="Plus" text="Nuova Nota" @click="addNote" />
     </template>
-  </v-header>
+  </the-header>
 
   <el-main class="notes-list">
     <note-element

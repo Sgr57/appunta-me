@@ -12,7 +12,6 @@ type Props = {
   showDates?: boolean,
 }
 const props = defineProps<Props>()
-
 const db = useFirestore()
 const noteDoc = doc(db, 'notes', props.note.id)
 
@@ -23,7 +22,6 @@ const updateTitle = async () => {
   })
 }
 
-const createDate = computed(() => formatDate(props.note.createDate))
 const updateDate = computed(() => formatDate(props.note.updateDate))
 
 </script>
@@ -31,8 +29,7 @@ const updateDate = computed(() => formatDate(props.note.updateDate))
 <template>
   <div class="note-info">
     <v-input v-model="note.title" @blur="updateTitle"></v-input>
-    <el-text v-if="showId" class="note-detail">Id: {{ note.id }}</el-text>
-    <!--    <el-text v-if="showDates" class="note-detail">Creata il: {{ createDate }}</el-text>-->
+    <!--    <el-text v-if="showId" class="note-detail">Id: {{ note.id }}</el-text>-->
     <el-text v-if="showDates" class="note-detail">Ultima modifica: {{ updateDate }}</el-text>
     <el-text v-if="showPreview" class="text-preview" line-clamp="5">{{ note.text }}</el-text>
   </div>

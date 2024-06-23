@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 import { useRoute, useRouter } from 'vue-router'
 import { Document } from '@element-plus/icons-vue'
 import { useDocument, useFirestore } from 'vuefire'
@@ -7,8 +6,9 @@ import { doc, updateDoc } from 'firebase/firestore'
 import NoteInfo from '@/components/NoteInfo.vue'
 import VTextArea from '@/components/VTextArea.vue'
 import VButton from '@/components/VButton.vue'
-import VHeader from '@/components/VHeader.vue'
+import TheHeader from '@/components/TheHeader.vue'
 
+const router = useRouter()
 const route = useRoute();
 const noteId: string = route.params.noteId as string;
 
@@ -23,32 +23,26 @@ const updateText = async () => {
   })
 }
 
-const router = useRouter();
-const goTo = (path: string) => {
-  router.push(path);
+const updateNote = () => {
+  router.push('/')
 }
 
-const saveNote = () => {
-
-}
 
 </script>
 
 <template>
-  <!--  <el-container>-->
-  <v-header>
+  <the-header>
     <template #center>
       <note-info v-if="note" :note="note" show-dates />
     </template>
     <template #right>
-      <v-button :icon="Document" text="Salva Nota" @click="goTo('/')" />
+      <v-button :icon="Document" text="Salva Nota" @click="updateNote" />
     </template>
-  </v-header>
+  </the-header>
 
-    <el-main class="note-wrapper">
-      <v-text-area v-if="note" v-model="note.text" @blur="updateText"></v-text-area>
-    </el-main>
-  <!--  </el-container>-->
+  <el-main class="note-wrapper">
+    <v-text-area v-if="note" v-model="note.text" @blur="updateText"></v-text-area>
+  </el-main>
 </template>
 
 <style scoped>
